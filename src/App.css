@@ -1,0 +1,232 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+#root {
+  background: #292A2B;
+}
+
+.loader-container {
+  background-color: #157579;
+  width: 100%;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  margin: auto;
+  border-color: #101d54 transparent #202b5b transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+  }
+  
+  @keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  }
+
+
+
+
+.App {
+  /*background: #6c757d;*/
+  width: 1000px;
+  margin-top: -260px;
+  margin-left: 15%;
+  border-radius: 15px;
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+}
+
+.App h1 {
+  font-size: 50px;
+  position: absolute;
+  font-weight: 700;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.App .btnCreate {
+  margin-left: 85%;
+  margin-top: 2%;
+  margin-bottom: 25px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /*background: #220303;*/
+  flex-wrap: wrap;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 430px;
+  background: rgba(64, 145, 108, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .5s;
+  margin: 15px 20px;
+  
+  
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(106, 92, 254, .5); /*rgba(3, 89, 92, .5);*/
+  transform: translateY(-15px);
+}
+
+.card .head {
+  height: 125px;
+  width: 100%;
+  position: relative;
+}
+
+.card .head .circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #48bfe3;
+  bottom: 0;
+}
+
+.card .head .img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card .head .img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.card .description {
+  text-align: center;
+  color: #d8f3dc;
+  width: 90%;
+  height: 80%;
+  font-size: 13px;
+  margin: 0 auto;
+}
+
+.card .description i {
+  color: rgb(222, 212, 212);
+}
+
+.card .description h3 {
+  color: #2e1c5c;
+  margin-top: 90px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.card .description p {
+  margin-top: -12px;
+  font-weight: 400;
+}
+
+.card .contact {
+  
+  margin-top: -180px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.card .contact button {
+  color: #fff;
+  background: #157579;
+  padding: 5px 20px;
+  border-radius: 8px;
+  transition: .3s;
+  background: #5390d9;
+} 
+
+.card .contact button:hover {
+  background: #52b788;
+ 
+}
+
+
+/*@ The form*/
+
+.form {
+ /* background: skyblue;*/
+  width: 100%;
+   
+  position: relative;
+}
+
+form {
+  background: #232F3A;
+  backdrop-filter: blur(5px);
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.form .title{
+  margin-top: -59px;
+  font-size: 30px;
+}
+
+.principal h1 {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin-top: -80px;
+}
+
+.form .infoContainer {
+  /*background: seagreen;*/
+  padding: 10px 10px;
+}
+
+/*.infoContainer label {
+  font-size: 16px;
+}*/
+
+.infoContainer input {
+  width: 100%;
+  background: #232F3A;
+  border: solid 2px #354665;
+}
+
+.form .buttons {
+  margin-left: 55%;
+}
+
+.buttons button {
+  margin-left: 10px;
+  background: transparent;
+}
