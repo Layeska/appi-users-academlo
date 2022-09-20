@@ -1,16 +1,6 @@
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
-#root {
-  background: #292A2B;
-}
+#root { background: #292A2B; }
 
 .loader-container {
   background-color: #157579;
@@ -36,11 +26,7 @@
   }
   }
 
-
-
-
 .App {
-  /*background: #6c757d;*/
   width: 1000px;
   margin-top: -260px;
   margin-left: 15%;
@@ -68,24 +54,20 @@ ul {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /*background: #220303;*/
   flex-wrap: wrap;
   font-family: 'Quicksand', sans-serif;
 }
-
 
 .card {
   position: relative;
   width: 300px;
   height: 430px;
-  background: rgba(64, 145, 108, 0.8);
+  background: #735d78;
   backdrop-filter: blur(6px);
   border-radius: 15px;
   overflow: hidden;
   transition: .5s;
   margin: 15px 20px;
-  
-  
 }
 
 .card:hover {
@@ -104,7 +86,7 @@ ul {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: #48bfe3;
+  background: #b392ac;
   bottom: 0;
 }
 
@@ -127,7 +109,6 @@ ul {
   object-fit: cover;
 }
 
-
 .card .description {
   text-align: center;
   color: #d8f3dc;
@@ -137,9 +118,7 @@ ul {
   margin: 0 auto;
 }
 
-.card .description i {
-  color: rgb(222, 212, 212);
-}
+.card .description i { color: rgb(222, 212, 212); }
 
 .card .description h3 {
   color: #2e1c5c;
@@ -154,7 +133,6 @@ ul {
 }
 
 .card .contact {
-  
   margin-top: -180px;
   display: flex;
   justify-content: space-between;
@@ -163,16 +141,16 @@ ul {
 }
 
 .card .contact button {
-  color: #fff;
+  color: #ffff;
   background: #157579;
   padding: 5px 20px;
   border-radius: 8px;
   transition: .3s;
-  background: #5390d9;
+  background: #d1b3c4;
 } 
 
 .card .contact button:hover {
-  background: #52b788;
+  background: #9c89b8;
  
 }
 
@@ -180,20 +158,20 @@ ul {
 /*@ The form*/
 
 .form {
- /* background: skyblue;*/
   width: 100%;
-   
   position: relative;
 }
 
 form {
-  background: #232F3A;
+  background: #918bae;
   backdrop-filter: blur(5px);
   width: 35%;
   margin: 0 auto;
   border-radius: 16px;
   padding: 20px;
 }
+
+::placeholder { color: #F1EAE2; }
 
 .form .title{
   margin-top: -59px;
@@ -207,24 +185,15 @@ form {
   margin-top: -80px;
 }
 
-.form .infoContainer {
-  /*background: seagreen;*/
-  padding: 10px 10px;
-}
-
-/*.infoContainer label {
-  font-size: 16px;
-}*/
+.form .infoContainer { padding: 10px 10px; }
 
 .infoContainer input {
   width: 100%;
-  background: #232F3A;
-  border: solid 2px #354665;
+  background: #ada7c9;
+  border: solid 2px #d1b3c4;
 }
 
-.form .buttons {
-  margin-left: 55%;
-}
+.form .buttons { margin-left: 55%; }
 
 .buttons button {
   margin-left: 10px;

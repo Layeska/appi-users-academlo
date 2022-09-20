@@ -48,7 +48,7 @@ const UsersForm = ({getUsers, userSelected, deselectedUser}) => {
                     <h1 className='title'>{userSelected ? 'Update' : 'Create'} User</h1>
                     <div className='infoContainer'>
                         {/*<label htmlFor='email'>Email </label>*/}
-                        <input type='email' id='email' {...register('email')} placeholder='Insert Name' required/>
+                        <input type='email' id='email' {...register('email')} placeholder='Insert Email' required/>
                     </div>
 
                     <div className='infoContainer'>

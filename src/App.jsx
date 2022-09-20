@@ -33,8 +33,8 @@ function App() {
             <div className="spinner"></div>
           </div> ) : (
         <>
-          <button onClick={() => getUsers()}><i className="fa-solid fa-left-long"></i></button>
-          <button className='btnCreate' onClick={() => setIsVisible(!isVisible)}><i className="fa-solid fa-plus"></i> {isVisible ? 'Update' : 'Create'} user</button>
+          {/*<button><i className="fa-solid fa-left-long"></i>{isVisible}</button>*/}
+          <button className='btnCreate' onClick={() => setIsVisible(!isVisible)}> {isVisible ? <i className="fa-solid fa-left-long"></i> : <i className="fa-solid fa-plus"></i>} {isVisible ? ' to Back' : 'Create'} user</button>
          {/* <UsersForm getUsers={getUsers} userSelected={userSelected} deselectedUser={deselectedUser}/>
           <br />
           <br />
@@ -46,7 +46,7 @@ function App() {
 
           {
             isVisible ? ( <UsersForm getUsers={getUsers} userSelected={userSelected} deselectedUser={deselectedUser}/>
-            ) : <UserList user={user} selectUsers={selectUsers} getUsers={getUsers}/>
+            ) : <UserList user={user} selectUsers={selectUsers} getUsers={getUsers} deselectedUser={deselectedUser}/>
           }
         </>
         )

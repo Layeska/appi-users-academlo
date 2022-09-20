@@ -3,7 +3,7 @@ import axios from 'axios'
 import Users from './Users.json'
 import PhotosCats from './PhotosCats'
 
-const UserList = ({user, selectUsers, getUsers}) => {
+const UserList = ({user, selectUsers, getUsers, deselectedUser}) => {
 
     const [isLoading, setIsLoading ] = useState(false)
     const [isVisible, setIsVisible] = useState(false)
@@ -11,38 +11,6 @@ const UserList = ({user, selectUsers, getUsers}) => {
 
     const deleteUsers = (id) => {
         axios.delete(`https://users-crud1.herokuapp.com/users/${id}/`).then(() => getUsers())//.finally(() => setIsLoading(false))
-    }
-
-    
-
-    const validateAge = (birthday) => {
-        let elem = birthday.split('-');
-
-        let year = elem[0];
-        let actual = (2022 - year)
-
-        if(actual < 30) {
-            //entre 10 y 13 años de las fotos
-            let num = Math.floor(Math.random() * (13 - 10 + 1)) + 10 
-
-            return (
-                <>
-                    {/*<img src={Users[num]?.picture} alt="" />*/}
-                    <PhotosCats/>
-               </>
-            )
-        }
-
-        if(actual < 20) {
-            //entre 6 y 10 años de las fotos
-            let num = Math.floor(Math.random() * (10 - 6 + 1)) + 6 
-
-            return (
-                <>
-                    <img src={Users[num]?.picture} alt="" />
-                </>
-            )
-        }
     }
 
     return (
@@ -62,7 +30,7 @@ const UserList = ({user, selectUsers, getUsers}) => {
                             <div className='head'>
                                 <div className='circle'>
                                     <div className='img'>
-                                        { validateAge(person.birthday) }
+                                        { <PhotosCats/> }
                                     </div>
                                 </div>
                             </div>
@@ -75,6 +43,7 @@ const UserList = ({user, selectUsers, getUsers}) => {
                             </div>
                             <div className='contact'>
                                 <button onClick={() => selectUsers(person)}><i className="fa-solid fa-pencil"></i></button>
+                                
                                 
                                 <button onClick={() => deleteUsers(person.id)}><i className="fa-solid fa-trash"></i></button>
                             </div>
@@ -91,22 +60,6 @@ const UserList = ({user, selectUsers, getUsers}) => {
 }
 
 export default UserList
-
-/*
-
-<li key={person.id}>
-                            { validateAge(person.birthday) }
-                            {person.email}
-                            <div><b>Password</b> {person.password}</div>
-                            <div><b>First Name</b> {person.first_name}</div>
-                            <div><b>Last Name</b> {person.last_name}</div>
-                            <div><b>Birthday</b> {person.birthday}</div>
-                            <button onClick={() => selectUsers(person)}>Edit</button>
-                            <button onClick={() => deleteUsers(person.id)}>Delete</button>
-                            <br />
-                        </li>
-
-*/
 
 
 {/*{person.email}
